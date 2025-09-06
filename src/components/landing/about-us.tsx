@@ -26,8 +26,11 @@ export function AboutUs() {
             <p className="text-muted-foreground leading-relaxed mb-4">
               Nacimos de la pasión por la tecnología de Apple y el compromiso con la sostenibilidad. En Mac-Out, creemos que la calidad no tiene por qué ser cara ni perjudicial para el planeta.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Seleccionamos, verificamos y ponemos a punto cada dispositivo para que disfrutes de la experiencia Apple como si fuera nuevo. Somos tu tienda de confianza en Sevilla.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              Encuentra nuestras últimas ofertas y ponte en contacto con nosotros a través de nuestras plataformas de venta principales: Wallapop e Instagram. ¡Síguenos para no perderte nada!
             </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-96">
