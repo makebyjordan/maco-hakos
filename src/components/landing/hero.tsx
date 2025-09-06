@@ -17,7 +17,6 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 container mx-auto px-4 flex flex-col justify-end h-full py-24">
         <div className="max-w-3xl text-left">
-          <p className="text-sm text-gray-300 mb-2">Dale una segunda vida a la tecnología</p>
           <h1 className="font-headline text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
               Tu Apple reacondicionado.
               <span className="block text-primary mt-2">
