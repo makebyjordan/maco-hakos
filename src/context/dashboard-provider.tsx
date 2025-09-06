@@ -8,10 +8,12 @@ import {
   updateDoc, 
   deleteDoc, 
   doc,
-  Timestamp
+  Timestamp,
+  query,
+  orderBy
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
-import type { Product, ProductData, Transaction, TransactionData } from "@/types";
+import type { Product, ProductData, Transaction, TransactionData, Testimonial, TestimonialData } from "@/types";
 import { useToast } from "@/hooks/use-toast";
 
 interface DashboardContextType {
@@ -24,6 +26,9 @@ interface DashboardContextType {
   addTransaction: (transaction: TransactionData) => Promise<void>;
   updateTransaction: (id: string, updatedTransaction: TransactionData) => Promise<void>;
   deleteTransaction: (id: string) => Promise<void>;
+  testimonials: Testimonial[];
+  addTestimonial: (testimonial: TestimonialData) => Promise<void>;
+  deleteTestimonial: (id: string) => Promise<void>;
   totalIncome: number;
   totalExpenses: number;
   netBalance: number;
@@ -35,16 +40,18 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState<Product[]>([]);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
   const { toast } = useToast();
 
   const productsCollection = collection(db, "products");
   const transactionsCollection = collection(db, "transactions");
+  const testimonialsCollection = collection(db, "testimonials");
 
   const fetchAllData = useCallback(async () => {
     setLoading(true);
     try {
       // Fetch products
-      const productsSnapshot = await getDocs(productsCollection);
+      const productsSnapshot = await getDocs(query(collection(db, "products"), orderBy("name")));
       const productsList = productsSnapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
@@ -52,7 +59,7 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
       setProducts(productsList);
 
       // Fetch transactions
-      const transactionsSnapshot = await getDocs(transactionsCollection);
+      const transactionsSnapshot = await getDocs(query(collection(db, "transactions"), orderBy("date", "desc")));
       const transactionsList = transactionsSnapshot.docs.map(doc => {
         const data = doc.data();
         return {
@@ -62,6 +69,14 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
         }
       }) as Transaction[];
       setTransactions(transactionsList);
+
+      // Fetch testimonials
+      const testimonialsSnapshot = await getDocs(query(collection(db, "testimonials"), orderBy("name")));
+      const testimonialsList = testimonialsSnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      })) as Testimonial[];
+      setTestimonials(testimonialsList);
 
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -81,13 +96,13 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
   
   const addProduct = async (productData: ProductData) => {
     const docRef = await addDoc(productsCollection, productData);
-    setProducts(prev => [...prev, { id: docRef.id, ...productData }]);
+    setProducts(prev => [...prev, { id: docRef.id, ...productData }].sort((a, b) => a.name.localeCompare(b.name)));
   };
 
   const updateProduct = async (id: string, updatedProductData: ProductData) => {
     const productDoc = doc(db, "products", id);
     await updateDoc(productDoc, updatedProductData);
-    setProducts(prev => prev.map(p => p.id === id ? { id, ...updatedProductData } : p));
+    setProducts(prev => prev.map(p => p.id === id ? { id, ...updatedProductData } : p).sort((a, b) => a.name.localeCompare(b.name)));
   };
   
   const deleteProduct = async (id: string) => {
@@ -102,7 +117,7 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
       date: new Date()
     };
     const docRef = await addDoc(transactionsCollection, dataWithDate);
-    setTransactions(prev => [...prev, { ...dataWithDate, id: docRef.id }]);
+    setTransactions(prev => [...prev, { ...dataWithDate, id: docRef.id }].sort((a, b) => b.date.getTime() - a.date.getTime()));
   };
   
   const updateTransaction = async (id: string, updatedTransactionData: TransactionData) => {
@@ -112,8 +127,8 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
     if (!originalTx) return;
 
     const dataToUpdate = { ...updatedTransactionData, date: originalTx.date };
-    await updateDoc(transactionDoc, dataToUpdate);
-    setTransactions(prev => prev.map(t => t.id === id ? { ...originalTx, ...updatedTransactionData, id } : t));
+    await updateDoc(transactionDoc, dataToUpdate as any);
+    setTransactions(prev => prev.map(t => t.id === id ? { ...originalTx, ...updatedTransactionData, id } : t).sort((a, b) => b.date.getTime() - a.date.getTime()));
   };
 
   const deleteTransaction = async (id: string) => {
@@ -121,6 +136,17 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
     await deleteDoc(transactionDoc);
     setTransactions(prev => prev.filter(t => t.id !== id));
   };
+
+  const addTestimonial = async (testimonialData: TestimonialData) => {
+    const docRef = await addDoc(testimonialsCollection, testimonialData);
+    setTestimonials(prev => [...prev, {id: docRef.id, ...testimonialData}].sort((a,b) => a.name.localeCompare(b.name)));
+  };
+
+  const deleteTestimonial = async (id: string) => {
+    await deleteDoc(doc(db, "testimonials", id));
+    setTestimonials(prev => prev.filter(t => t.id !== id));
+  };
+
 
   const { totalIncome, totalExpenses, netBalance } = useMemo(() => {
     const totalIncome = transactions
@@ -145,10 +171,13 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
     addTransaction,
     updateTransaction,
     deleteTransaction,
+    testimonials,
+    addTestimonial,
+    deleteTestimonial,
     totalIncome,
     totalExpenses,
     netBalance
-  }), [loading, products, transactions, totalIncome, totalExpenses, netBalance]); // eslint-disable-line react-hooks/exhaustive-deps
+  }), [loading, products, transactions, testimonials, totalIncome, totalExpenses, netBalance]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <DashboardContext.Provider value={value}>

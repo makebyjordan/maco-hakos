@@ -12,13 +12,14 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar";
 import { MacOutLogo } from "./icons";
-import { LayoutDashboard, Package, Wallet, LogOut } from "lucide-react";
+import { LayoutDashboard, Package, Wallet, LogOut, Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 const navItems = [
   { href: "/dashboard", icon: LayoutDashboard, label: "Resumen" },
   { href: "/dashboard/equipos", icon: Package, label: "Gestionar Equipos" },
   { href: "/dashboard/finanzas", icon: Wallet, label: "Gestión Financiera" },
+  { href: "/dashboard/testimonios", icon: Star, label: "Testimonios" },
 ];
 
 export function DashboardSidebar() {
@@ -44,7 +45,7 @@ export function DashboardSidebar() {
             <SidebarMenuItem key={item.href}>
               <SidebarMenuButton
                 asChild
-                isActive={pathname === item.href}
+                isActive={pathname.startsWith(item.href) && (item.href !== '/dashboard' || pathname === '/dashboard')}
                 className="font-headline font-semibold"
               >
                 <Link href={item.href}>

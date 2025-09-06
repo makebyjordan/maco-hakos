@@ -23,3 +23,14 @@ export type Transaction = TransactionData & {
   id: string;
   date: Date;
 };
+
+export type TestimonialData = {
+  name: string;
+  review: string;
+  stars: number;
+  avatar: string;
+};
+
+export type Testimonial = TestimonialData & {
+  id: string;
+};
