@@ -2,6 +2,8 @@ import { Star } from "lucide-react";
 import { AnimatedSection } from "../animated-section";
 import { Avatar, AvatarFallback } from "../ui/avatar";
 import { Card, CardContent } from "../ui/card";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 const testimonials = [
   {
@@ -48,7 +50,7 @@ export function Testimonials() {
                         <div className="flex text-yellow-400 mb-4">
                             {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
                         </div>
-                        <p className="text-muted-foreground mb-6 text-base">&quot;{testimonial.review}&quot;</p>
+                        <p className="text-muted-foreground mb-6 text-base">"{testimonial.review}"</p>
                     </CardContent>
                     <div className="flex items-center">
                         <Avatar className="h-12 w-12 mr-4">
@@ -61,6 +63,13 @@ export function Testimonials() {
                 </Card>
             </AnimatedSection>
           ))}
+        </div>
+        <div className="text-center mt-12">
+            <Button asChild className="bg-gradient-to-r from-accent to-[hsl(var(--custom-yellow))] text-white rounded-full">
+                <Link href="/testimonios">
+                    Dicen mucho más...
+                </Link>
+            </Button>
         </div>
       </div>
     </AnimatedSection>

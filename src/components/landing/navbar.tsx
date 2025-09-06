@@ -10,12 +10,12 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#productos", label: "Productos" },
-  { href: "#quienes-somos", label: "Quiénes Somos" },
-  { href: "#testimonios", label: "Opiniones" },
-  { href: "#faq", label: "Preguntas" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#inicio", label: "Inicio" },
+  { href: "/#productos", label: "Productos" },
+  { href: "/#quienes-somos", label: "Quiénes Somos" },
+  { href: "/#testimonios", label: "Opiniones" },
+  { href: "/#faq", label: "Preguntas" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export function Navbar() {
@@ -39,7 +39,7 @@ export function Navbar() {
       )}>
         <div className="container mx-auto px-4">
           <div className="flex h-20 items-center justify-between">
-            <Link href="#inicio" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2">
               <MacOutLogo className="h-8 w-8 text-foreground" />
               <span className="font-headline text-xl font-bold">Mac-Out</span>
             </Link>
@@ -68,7 +68,7 @@ export function Navbar() {
                 <SheetContent side="right">
                     <div className="flex flex-col h-full">
                         <div className="flex items-center justify-between border-b pb-4">
-                             <Link href="#inicio" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                             <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                                 <MacOutLogo className="h-8 w-8 text-foreground" />
                                 <span className="font-headline text-xl font-bold">Mac-Out</span>
                             </Link>
