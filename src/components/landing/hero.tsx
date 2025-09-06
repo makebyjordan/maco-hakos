@@ -7,12 +7,12 @@ export function Hero() {
   return (
     <AnimatedSection id="inicio" className="relative h-[80vh] min-h-[500px] w-full text-white">
       <Image
-        src="https://picsum.photos/1200/800"
-        alt="Paisaje de colinas con niebla al atardecer"
+        src="https://macout.es/wp-content/uploads/2024/07/fondo-mac-out.png"
+        alt="Logo de Mac-Out sobre un fondo de cubos azules y negros"
         fill
         priority
         className="object-cover"
-        data-ai-hint="misty hills sunset"
+        data-ai-hint="logo company background"
       />
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 container mx-auto px-4 flex flex-col justify-end h-full py-24">
