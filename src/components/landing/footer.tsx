@@ -17,8 +17,8 @@ const footerLinks = {
   ],
   soporte: [
     { href: "#contacto", label: "Contacto" },
-    { href: "#", label: "Preguntas Frecuentes" },
-    { href: "#", label: "Garantía" },
+    { href: "/#faq", label: "Preguntas Frecuentes" },
+    { href: "/garantia", label: "Garantía" },
   ],
   legal: [
     { href: "#", label: "Términos y Condiciones" },
