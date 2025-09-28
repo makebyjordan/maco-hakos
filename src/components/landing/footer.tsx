@@ -1,10 +1,25 @@
 import { MacOutLogo } from "../icons";
-import { Twitter, Instagram, Facebook } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import Image from "next/image";
+
+const WallapopIcon = (props: { className?: string }) => (
+  <Image 
+    src="https://www.svgrepo.com/show/520166/wallapop.svg" 
+    alt="Wallapop" 
+    width={20} 
+    height={20} 
+    className={props.className} 
+    // Wallapop SVG is black, this will make it match other icons color.
+    // This is a trick to change SVG color with tailwind.
+    // It will only work for monochrome SVGs.
+    style={{ filter: 'brightness(0) saturate(100%) invert(59%) sepia(8%) saturate(548%) hue-rotate(177deg) brightness(95%) contrast(88%)' }}
+  />
+);
 
 const socialLinks = [
-  { icon: Twitter, href: "#", name: "Twitter" },
+  { icon: WallapopIcon, href: "#", name: "Wallapop" },
   { icon: Instagram, href: "#", name: "Instagram" },
   { icon: Facebook, href: "#", name: "Facebook" },
 ];
