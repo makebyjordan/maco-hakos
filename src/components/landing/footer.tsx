@@ -11,10 +11,9 @@ const socialLinks = [
 
 const footerLinks = {
   productos: [
-    { href: "#productos", label: "MacBook" },
-    { href: "#productos", label: "iPhone" },
-    { href: "#productos", label: "iPad" },
-    { href: "#productos", label: "Watch" },
+    { href: "#productos", label: "iMac" },
+    { href: "#productos", label: "Macbook Air" },
+    { href: "#productos", label: "Macbook Pro" },
   ],
   soporte: [
     { href: "#contacto", label: "Contacto" },
