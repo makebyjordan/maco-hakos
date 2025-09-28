@@ -21,7 +21,6 @@ const WallapopIcon = (props: { className?: string }) => (
 const socialLinks = [
   { icon: WallapopIcon, href: "#", name: "Wallapop" },
   { icon: Instagram, href: "#", name: "Instagram" },
-  { icon: Facebook, href: "#", name: "Facebook" },
 ];
 
 const footerLinks = {
