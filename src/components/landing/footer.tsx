@@ -31,7 +31,7 @@ const footerLinks = {
     { href: "/garantia", label: "Garantía" },
   ],
   legal: [
-    { href: "#", label: "Términos y Condiciones" },
+    { href: "/terminos", label: "Términos y Condiciones" },
     { href: "/privacidad", label: "Política de Privacidad" },
     { href: "#", label: "Política de Cookies" },
   ],
