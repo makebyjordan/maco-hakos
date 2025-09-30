@@ -1,5 +1,6 @@
 "use client";
 import { AnimatedSection } from "../animated-section";
+import Link from "next/link";
 
 export function TermsAndConditions() {
   return (
