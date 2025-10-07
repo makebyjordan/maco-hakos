@@ -14,7 +14,7 @@ export function Hero() {
       />
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center h-full">
-        <div className="max-w-3xl text-center pt-[240px]">
+        <div className="max-w-3xl text-center pt-[270px]">
           <h1 className="font-headline text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">
               Tu Apple reacondicionado.
               <span className="block text-primary mt-1 md:mt-2">
