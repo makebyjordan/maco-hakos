@@ -45,7 +45,11 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="#inicio" className="flex items-center gap-3 mb-4">
               <MacOutLogo className="h-10 w-10 text-foreground" />
-              <span className="font-headline text-2xl font-bold">Macout</span>
+              <div className="font-headline text-2xl font-bold">
+                <div>MAC</div>
+                <div className="h-0.5 bg-foreground w-full"></div>
+                <div>OUT</div>
+              </div>
             </Link>
             <p className="text-muted-foreground max-w-xs mb-6">
               Calidad y sostenibilidad en el corazón de Sevilla. Tu Apple reacondicionado de confianza.
