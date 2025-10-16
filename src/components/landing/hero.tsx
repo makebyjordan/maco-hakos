@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <AnimatedSection id="inicio" className="relative h-screen w-full text-white">
       <Image
-        src="https://iili.io/KlQyBmG.jpg"
+        src="https://iili.io/Kk6Z9Rt.jpg"
         alt="Logo de Macout sobre un fondo de cubos azules y negros"
         fill
         priority
