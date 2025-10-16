@@ -39,7 +39,7 @@ export function DashboardSidebar() {
           <div className="font-headline text-xl font-bold">
             <div>MAC</div>
             <div className="h-0.5 bg-foreground w-full"></div>
-            <div>OUT</div>
+            <div className="-mt-1">OUT</div>
           </div>
         </Link>
       </SidebarHeader>
