@@ -48,7 +48,7 @@ export function Footer() {
               <div className="font-headline text-2xl font-bold">
                 <div className="-mb-1.5">MAC</div>
                 <div className="h-0.5 bg-foreground w-full"></div>
-                <div className="-mt-1.5">OUT</div>
+                <div>OUT</div>
               </div>
             </Link>
             <p className="text-muted-foreground max-w-xs mb-6">

@@ -44,7 +44,7 @@ export function Navbar() {
               <div className="font-headline text-xl font-bold">
                 <div className="-mb-1">MAC</div>
                 <div className="h-0.5 bg-foreground w-full"></div>
-                <div className="-mt-1">OUT</div>
+                <div>OUT</div>
               </div>
             </Link>
 
@@ -77,7 +77,7 @@ export function Navbar() {
                                 <div className="font-headline text-xl font-bold">
                                   <div className="-mb-1">MAC</div>
                                   <div className="h-0.5 bg-foreground w-full"></div>
-                                  <div className="-mt-1">OUT</div>
+                                  <div>OUT</div>
                                 </div>
                             </Link>
                         </div>
