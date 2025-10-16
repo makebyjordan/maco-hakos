@@ -42,7 +42,7 @@ export function Navbar() {
             <Link href="/" className="flex items-center gap-2">
               <MacOutLogo className="h-8 w-8 text-foreground" />
               <div className="font-headline text-xl font-bold">
-                <div>MAC</div>
+                <div className="-mb-1">MAC</div>
                 <div className="h-0.5 bg-foreground w-full"></div>
                 <div className="-mt-1">OUT</div>
               </div>
@@ -75,7 +75,7 @@ export function Navbar() {
                              <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                                 <MacOutLogo className="h-8 w-8 text-foreground" />
                                 <div className="font-headline text-xl font-bold">
-                                  <div>MAC</div>
+                                  <div className="-mb-1">MAC</div>
                                   <div className="h-0.5 bg-foreground w-full"></div>
                                   <div className="-mt-1">OUT</div>
                                 </div>

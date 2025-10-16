@@ -46,7 +46,7 @@ export function Footer() {
             <Link href="#inicio" className="flex items-center gap-3 mb-4">
               <MacOutLogo className="h-10 w-10 text-foreground" />
               <div className="font-headline text-2xl font-bold">
-                <div>MAC</div>
+                <div className="-mb-1.5">MAC</div>
                 <div className="h-0.5 bg-foreground w-full"></div>
                 <div className="-mt-1.5">OUT</div>
               </div>
