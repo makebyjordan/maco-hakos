@@ -22,7 +22,7 @@ export function Hero() {
               <div className="font-headline text-5xl font-bold">
                 <div className="">MAC</div>
                 <div className="h-1 bg-white w-full"></div>
-                <div className="-mt-2">OUT</div>
+                <div className="">OUT</div>
               </div>
             </Link>
           <h1 className="font-headline text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">
