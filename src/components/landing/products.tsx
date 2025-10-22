@@ -37,7 +37,7 @@ export function Products() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {[...products]
                 .reverse()
-                .slice(0, 8)
+                .slice(0, 12)
                 .map((product, index) => (
                   // La animación en cascada de las tarjetas se mantiene. ¡Perfecto!
                   <AnimatedSection key={product.id} delay={index * 100}>
@@ -45,7 +45,7 @@ export function Products() {
                   </AnimatedSection>
                 ))}
             </div>
-            {products.length > 8 && (
+            {products.length > 12 && (
               <div className="text-center mt-12">
                 <Button asChild className="bg-gradient-to-r from-accent to-[hsl(var(--custom-yellow))] text-white rounded-full">
                   <Link href="https://es.wallapop.com/user/josev-9829447" target="_blank" rel="noopener noreferrer">
