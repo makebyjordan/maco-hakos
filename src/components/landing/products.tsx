@@ -45,7 +45,7 @@ export function Products() {
                   </AnimatedSection>
                 ))}
             </div>
-            {products.length > 12 && (
+            {products.length > 0 && (
               <div className="text-center mt-12">
                 <Button asChild className="bg-gradient-to-r from-accent to-[hsl(var(--custom-yellow))] text-white rounded-full">
                   <Link href="https://es.wallapop.com/user/josev-9829447" target="_blank" rel="noopener noreferrer">
