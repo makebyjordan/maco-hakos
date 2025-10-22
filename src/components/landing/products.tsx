@@ -3,6 +3,8 @@
 import { ProductCard } from "../product-card";
 import { useDashboard } from "@/hooks/use-dashboard";
 import { AnimatedSection } from "../animated-section";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 export function Products() {
   const { products, loading } = useDashboard();
@@ -31,17 +33,28 @@ export function Products() {
             </p>
           </AnimatedSection>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {[...products]
-              .reverse()
-              .slice(0, 12)
-              .map((product, index) => (
-                // La animación en cascada de las tarjetas se mantiene. ¡Perfecto!
-                <AnimatedSection key={product.id} delay={index * 100}>
-                  <ProductCard product={product} />
-                </AnimatedSection>
-              ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {[...products]
+                .reverse()
+                .slice(0, 8)
+                .map((product, index) => (
+                  // La animación en cascada de las tarjetas se mantiene. ¡Perfecto!
+                  <AnimatedSection key={product.id} delay={index * 100}>
+                    <ProductCard product={product} />
+                  </AnimatedSection>
+                ))}
+            </div>
+            {products.length > 8 && (
+              <div className="text-center mt-12">
+                <Button asChild className="bg-gradient-to-r from-accent to-[hsl(var(--custom-yellow))] text-white rounded-full">
+                  <Link href="https://es.wallapop.com/app/user/josemanuelv-142800355/published" target="_blank" rel="noopener noreferrer">
+                    Ver más
+                  </Link>
+                </Button>
+              </div>
+            )}
+          </>
         )}
       </div>
     </section>
