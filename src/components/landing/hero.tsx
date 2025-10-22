@@ -29,7 +29,7 @@ export function Hero() {
               Tu Apple reacondicionado.
           </h1>
           <p className="font-bold text-lg md:text-xl text-primary mt-2">Calidad y Ahorro</p>
-          <p className="mt-4 text-sm md:text-base text-gray-200">
+          <p className="mt-4 text-lg md:text-xl text-gray-200">
               Equipos 100% verificados, con garantía y al mejor precio.
               <br />
               Directamente desde el corazón de Sevilla.
