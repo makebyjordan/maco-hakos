@@ -30,7 +30,9 @@ export function Hero() {
           </h1>
           <p className="font-bold text-lg md:text-xl text-primary mt-2">Calidad y Ahorro</p>
           <p className="mt-4 text-lg md:text-xl text-gray-200">
-              Equipos 100% verificados, con garantía y al mejor precio.
+              Equipos 100% verificados,
+              <br />
+              con garantía y al mejor precio.
               <br />
               Directamente desde el corazón de Sevilla.
           </p>
