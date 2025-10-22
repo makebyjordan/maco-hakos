@@ -48,7 +48,7 @@ export function Products() {
             {products.length > 8 && (
               <div className="text-center mt-12">
                 <Button asChild className="bg-gradient-to-r from-accent to-[hsl(var(--custom-yellow))] text-white rounded-full">
-                  <Link href="https://es.wallapop.com/app/user/josemanuelv-142800355/published" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://es.wallapop.com/user/josev-9829447" target="_blank" rel="noopener noreferrer">
                     Ver más
                   </Link>
                 </Button>
