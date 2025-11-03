@@ -38,13 +38,13 @@ export function Navbar() {
         "sticky top-0 z-50 transition-all duration-300",
         isScrolled ? "bg-card/80 backdrop-blur-sm" : "bg-transparent"
       )}>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-2">
           <div className="flex h-20 items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <MacOutLogo className="h-8 w-8 text-foreground" />
-              <div className="relative h-10 w-[128px]">
+            <Link href="/" className="flex items-center">
+              <MacOutLogo className="h-8 w-8 text-foreground ml-2" />
+              <div className="relative h-10 w-[128px] -ml-6">
                 <Image
-                    src="https://iili.io/KQRAU9s.png"
+                    src="https://iili.io/KQ5X91e.png"
                     alt="Macout Logotipo"
                     fill
                     className="object-contain"
