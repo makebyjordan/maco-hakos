@@ -38,7 +38,7 @@ export function Hero() {
           <h1 className="font-headline pt-8 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
               Tu Apple reacondicionado.
           </h1>
-          <p className="font-bold text-lg md:text-xl text-primary mt-2">Calidad y Ahorro</p>
+          <p className="font-bold text-3xl md:text-5xl text-primary mt-6">Calidad y Ahorro</p>
           <p className="mt-4 text-lg md:text-xl text-gray-200">
               Equipos 100% verificados,
               <br />
