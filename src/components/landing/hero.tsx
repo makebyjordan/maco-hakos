@@ -17,7 +17,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center h-full">
         <div className="max-w-3xl text-center">
-           <Link href="/" className="flex items-center justify-center gap-2 mb-8">
+           <Link href="/" className="flex items-center justify-center">
               <MacOutLogo className="h-24 w-24 text-white" />
               <div className="relative h-[138.24px] w-[552.96px]">
                 <Image
