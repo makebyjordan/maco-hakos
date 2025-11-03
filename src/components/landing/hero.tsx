@@ -18,24 +18,24 @@ export function Hero() {
       <div className="relative container mx-auto flex flex-col items-center justify-center h-full">
         <div className="max-w-4xl mx-auto mb-8 text-center">
            <Link href="/" className="flex items-center justify-center">
-              <div className="relative h-40 w-40">
+              <div className="relative h-40 w-40 -mr-16">
                   <Image
                       src="https://iili.io/KQ5UldN.png"
                       alt="Macout Logo Manzana"
                       fill
-                      className="object-contain"
+                      className="object-contain ml-12"
                   />
               </div>
-              <div className="relative h-[250px] w-[650px] -ml-5">
+              <div className="relative h-[250px] w-[650px] -ml-16">
                 <Image
                     src="https://iili.io/KQRAU9s.png"
                     alt="Macout Logotipo"
                     fill
-                    className="object-contain"
+                    className="object-contain ml-12"
                 />
               </div>
             </Link>
-          <h1 className="font-headline pt-8 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+          <h1 className="font-headline pt-8 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
               Tu Apple reacondicionado.
           </h1>
           <p className="font-bold text-lg md:text-xl text-primary mt-2">Calidad y Ahorro</p>
