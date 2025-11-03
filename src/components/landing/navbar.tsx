@@ -40,11 +40,11 @@ export function Navbar() {
       )}>
         <div className="container mx-auto px-4">
           <div className="flex h-20 items-center justify-between">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center gap-2">
               <MacOutLogo className="h-8 w-8 text-foreground" />
-              <div className="relative h-10 w-[128px] -ml-7">
+              <div className="relative h-10 w-[128px]">
                 <Image
-                    src="https://iili.io/KUkwLEG.png"
+                    src="https://iili.io/KQRAgAG.png"
                     alt="Macout Logotipo"
                     fill
                     className="object-contain"
@@ -77,11 +77,11 @@ export function Navbar() {
                 <SheetContent side="right">
                     <div className="flex flex-col h-full">
                         <div className="flex items-center justify-between border-b pb-4">
-                             <Link href="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
+                             <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                                 <MacOutLogo className="h-8 w-8 text-foreground" />
-                                <div className="relative h-10 w-[128px] -ml-12">
+                                <div className="relative h-10 w-[128px]">
                                   <Image
-                                      src="https://iili.io/KUkwLEG.png"
+                                      src="https://iili.io/KQRAgAG.png"
                                       alt="Macout Logotipo"
                                       fill
                                       className="object-contain"

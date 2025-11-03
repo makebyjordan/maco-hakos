@@ -17,12 +17,15 @@ export function Hero() {
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center h-full">
         <div className="max-w-3xl text-center">
-           <Link href="/" className="flex items-center justify-center gap-4 mb-8">
+           <Link href="/" className="flex items-center justify-center gap-5 mb-8">
               <MacOutLogo className="h-24 w-24 text-white" />
-              <div className="font-headline text-5xl font-light tracking-[0.2em]">
-                <div className="mb-1">MAC</div>
-                <div className="h-0.5 bg-white w-full"></div>
-                <div className="mt-1">OUT</div>
+              <div className="relative h-12 w-48">
+                <Image
+                    src="https://iili.io/KQ5Y5vt.png"
+                    alt="Macout Logotipo"
+                    fill
+                    className="object-contain"
+                />
               </div>
             </Link>
           <h1 className="font-headline text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight">

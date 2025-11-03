@@ -43,11 +43,11 @@ export function Footer() {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-2">
-            <Link href="#inicio" className="flex items-center mb-4">
+            <Link href="#inicio" className="flex items-center gap-2 mb-4">
               <MacOutLogo className="h-10 w-10 text-foreground" />
-              <div className="relative h-10 w-[128px] -ml-2">
+              <div className="relative h-10 w-[128px]">
                  <Image
-                    src="https://iili.io/KUkwLEG.png"
+                    src="https://iili.io/KQRAgAG.png"
                     alt="Macout Logotipo"
                     fill
                     className="object-contain"

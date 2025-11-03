@@ -35,11 +35,11 @@ export function DashboardSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <Link href="/dashboard" className="flex items-center">
+        <Link href="/dashboard" className="flex items-center gap-2">
           <MacOutLogo className="h-8 w-8 text-foreground" />
-          <div className="relative h-10 w-[128px] -ml-4">
+          <div className="relative h-10 w-[128px]">
             <Image
-                src="https://iili.io/KUkwLEG.png"
+                src="https://iili.io/KQRAgAG.png"
                 alt="Macout Logotipo"
                 fill
                 className="object-contain"
