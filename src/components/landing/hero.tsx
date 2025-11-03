@@ -19,7 +19,7 @@ export function Hero() {
         <div className="max-w-3xl text-center">
            <Link href="/" className="flex items-center justify-center gap-5 mb-8">
               <MacOutLogo className="h-24 w-24 text-white" />
-              <div className="relative h-[76.8px] w-[307.2px]">
+              <div className="relative h-[138.24px] w-[552.96px]">
                 <Image
                     src="https://iili.io/KQ5Y5vt.png"
                     alt="Macout Logotipo"
