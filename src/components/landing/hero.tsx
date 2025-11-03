@@ -15,7 +15,7 @@ export function Hero() {
         data-ai-hint="logo company background"
       />
       <div className="absolute inset-0 bg-black/60" />
-      <div className="relative  container mx-auto flex flex-col items-center justify-center h-full">
+      <div className="relative container mx-auto flex flex-col items-center justify-center h-full">
         <div className="max-w-4xl mx-auto mb-8 text-center">
            <Link href="/" className="flex items-center justify-center">
               <div className="relative h-40 w-40">
@@ -26,7 +26,7 @@ export function Hero() {
                       className="object-contain"
                   />
               </div>
-              <div className="relative h-[138.24px] w-[552.96px] -ml-5">
+              <div className="relative h-[250px] w-[650px] -ml-5">
                 <Image
                     src="https://iili.io/KQRAU9s.png"
                     alt="Macout Logotipo"
@@ -35,7 +35,7 @@ export function Hero() {
                 />
               </div>
             </Link>
-          <h1 className="font-headline pt-8 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h1 className="font-headline pt-8 text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
               Tu Apple reacondicionado.
           </h1>
           <p className="font-bold text-lg md:text-xl text-primary mt-2">Calidad y Ahorro</p>
