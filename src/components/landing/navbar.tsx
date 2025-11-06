@@ -42,7 +42,7 @@ export function Navbar() {
           <div className="flex h-20 items-center justify-between">
             <Link href="/" className="flex items-center">
               <MacOutLogo className="h-8 w-8 text-foreground ml-2" />
-              <div className="relative h-10 w-[128px] -ml-6">
+              <div className="relative h-10 w-[128px] -ml-8">
                 <Image
                     src="https://iili.io/KQ5X91e.png"
                     alt="Macout Logotipo"
