@@ -26,7 +26,7 @@ export function Hero() {
                       className="object-contain"
                   />
               </div>
-              <div className="relative h-[150px] w-[75px] sm:h-[225px] sm:w-[225px]">
+              <div className="relative h-[150px] w-[150px] sm:h-[225px] sm:w-[225px]">
                 <Image
                     src="https://iili.io/KQ5Y5vt.png"
                     alt="Macout Logotipo"
