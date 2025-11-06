@@ -18,7 +18,7 @@ export function Hero() {
       <div className="relative container mx-auto flex flex-col items-center justify-center h-full px-4">
         <div className="max-w-4xl mx-auto mb-8 text-center">
            <Link href="/" className="flex items-center justify-center gap-4">
-              <div className="relative h-24 w-24 sm:h-32 sm:w-32">
+              <div className="relative h-24 w-[106px] sm:h-32 sm:w-[138px]">
                   <Image
                       src="https://iili.io/KQ5UldN.png"
                       alt="Macout Logo Manzana"
