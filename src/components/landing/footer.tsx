@@ -15,7 +15,7 @@ const WallapopIcon = (props: { className?: string }) => (
 );
 
 const socialLinks = [
-  { icon: WallapopIcon, href: "https://es.wallapop.com/user/josev-9829447", name: "Wallapop" },
+  { icon: WallapopIcon, href: "https://es.wallapop.com/item/mac-out-sevilla-ordenadores-apple-724154289", name: "Wallapop" },
   { icon: Instagram, href: "https://www.instagram.com/mac_out_sevilla/?hl=es", name: "Instagram" },
 ];
 
