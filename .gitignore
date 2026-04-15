@@ -1,6 +1,4 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
+# Dependencias
 /node_modules
 /.pnp
 .pnp.*
@@ -10,36 +8,46 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# Next.js y Build
 /.next/
 /out/
-
-# production
 /build
+/dist
+*.tsbuildinfo
+next-env.d.ts
 
-# misc
-.DS_Store
+# Protocolo Nix-Maker y Archivos de Sistema
+.nix0/
+.nix-api
+.modified
+.idx/backup/
+.idx/.temp/
+
+# Testing
+/coverage
+
+# Entornos y Secretos
+.env*
+!.env.example
 *.pem
+.genkit/*
 
-# debug
+# Logs y Debugging
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+*.log
+firebase-debug.log*
+firestore-debug.log*
+pubsub-debug.log*
+ui-debug.log*
 
-# vercel
+# OS Específicos
+.DS_Store
+Thumbs.db
+.directory
+
+# Vercel / Firebase
 .vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-.genkit/*
-.env*
-
-# firebase
-firebase-debug.log
-firestore-debug.log
+.firebase/
